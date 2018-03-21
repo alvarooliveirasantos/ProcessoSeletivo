@@ -1,5 +1,5 @@
 PROCESSO SELETIVO
-De acordo com as atividades propostas foram desenvolvidos dois projetos em Java, para facilitar os testes e como se trata de projetos simples não foi utilizado nenhum framework, os projetos foram criados em aplicações Java básicas, ambas possuem uma classe main para iniciar a aplicação, para mais detalhes foi criado um arquivo de instruções no próprio projeto com mais detalhes de como utiliza-los.
+De acordo com as atividades propostas foram desenvolvidos dois projetos em Java, para facilitar os testes e como se trata de projetos simples não foi utilizado nenhum framework a não ser o Maven para gerenciar as bibliotecas, os projetos foram criados em aplicações Java básicas, ambas possuem uma classe main para iniciar a aplicação, para mais detalhes foi criado um arquivo de instruções no próprio projeto com mais detalhes de como utiliza-los.
 
 ABAIXO SEGUE AS INSTRUÇÕES ASSIM COMO NO README DOS PROJETOS
 
