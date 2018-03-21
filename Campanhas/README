@@ -1,0 +1,70 @@
+Para o exercício proposto foram expostos alguns serviços.
+
+para os serviços de crud de clientes foi exposto na url http://localhost:8080/clientes
+Para os serviços de crud de campanhas foi exposto na url http://localhost:8080/campanhas
+Para os serviços de crud de times foi exposto na url http://localhost:8080/times
+A relação entre campanhas e clientes foi exposto a url http://localhost:8080/relacaocampanhas
+
+Para a utilização destes serviços particularmente optei por utilizar a ferramenta Advanced REST client, mas fique a vontade para utilizar a que preferir, pelo método GET é possível retornar todas as campanhas que estão ativas ou seja as campanhas onde a data de termino seja superior a data atual, pelo método GET dos do serviço de times e de clientes e possível retornar todos os times e todas os clientes cadastrados no sistema, com o intuito de deixar a aplicação o mais autónoma possível os dados são criados em memória. 
+
+Para remover um dados basta mudar o método para DELETE inserir uma / e inserir o id do mesmo.
+Para alterar algum dado basta mudar o método para PUT inserir uma / e inserir o id do mesmo sem esquecer de enviar o dados completos através do body.
+Para inserir um novo dado mude o método para POST e enviar o conteúdo JSON.
+
+O relacionamento entre cliente time e campanha é feito pelo id, uma campanha pode ter apenas um id referente ao cliente, quando a campanha passa a ter algum id de cliente cadastrado automaticamente ela para de aparecer na lista de campanhas pois ela não está mais disponível para outros clientes.
+
+INICIAR A APLICAÇÃO
+
+Para iniciar a aplicação execute classe Servidor como Java application ela ira iniciar todos os serviços. 
+
+
+PARA ADICIONAR DADOS (METODO POST)
+
+JSON para adicionar nova campanha 
+
+{"nome":"Campanha Corinthians","idTimeCoracao;":"1","dataInicioEntrada":"10/10/2019","dataTerminoEntrada":"10/11/2019","idCliente":"1"}
+
+
+JSON para adicionar novo time 
+
+{"nome":"Corinthians"}
+
+JSON para adicionar novo cliente
+
+{"nome":"Corinthians","nascimento":"09/08/1992","email":"alvaro@campanhas.net","idTime":"1"}
+
+
+PARA LISTAR OS DADOS (METODO GET)
+
+http://localhost:8080/clientes
+http://localhost:8080/campanhas
+http://localhost:8080/times
+http://localhost:8080/relacaocampanhas
+
+PARA REMOVER ALGUM DOS DADOS BASTA INSERIR UMA / E O ID DO DADO A SER REMOVIDO (METODO DELETE)
+
+
+PARA ALTERAR OS DADOS BASTA INSERIR UMA / O ID DO DADO A SER ALTERADO E ENVIAR OS DADOS COMPLETOS PELO BODY (METODO PUT)
+
+JSON para alterar nova campanha 
+
+{"nome":"Campanha Corinthians","idTimeCoracao;":"1","dataInicioEntrada":"10/10/2019","dataTerminoEntrada":"10/11/2019","idCliente":"1"}
+
+
+JSON para alterar novo time 
+
+{"nome":"Corinthians"}
+
+JSON para alterar novo cliente
+
+{"nome":"Corinthians","nascimento":"09/08/1992","email":"alvaro@campanhas.net","idTime":"1"}
+
+
+
+# DETALHES
+
+* Uma campanha não ficara disponivel quando for relacionada a um cliente, para listar as campanhas relacionadas a cliente ultilizar
+a url:http://localhost:8080/relacaocampanhas via metodo GET
+
+* Caso alguma data digitada seja invalida o sistema ira alterar para a proxima data valida 
+
